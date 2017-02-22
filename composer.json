@@ -1,6 +1,6 @@
 {
-	"name": "iqnection-modules/embededcontent",
-	"description": "SilverStripe 3 Embeded Content Management",
+	"name": "iqnection-modules/embeddedcontent",
+	"description": "SilverStripe 3 Embedded Content Management",
 	"type": "silverstripe-module",
 	"keywords": ["iqnection","pages"],
 	"authors": [
@@ -15,6 +15,6 @@
 		"nathancox/codeeditorfield" : "dev-master"
 	},
 	"extra": {
-		"installer-name": "iq-embededcontent"
+		"installer-name": "iq-embeddedcontent"
 	}
 }

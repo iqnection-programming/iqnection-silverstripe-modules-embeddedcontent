@@ -1,6 +1,6 @@
 <?php
 
-class EmbededContent extends DataObject
+class EmbeddedContent extends DataObject
 {
 	private static $db = array(
 		'Title' => 'Varchar(255)',
@@ -45,11 +45,11 @@ class EmbededContent extends DataObject
 	
 	public function forTemplate()
 	{
-		return $this->renderWith(array('EmbededContent'));
+		return $this->renderWith(array('EmbeddedContent'));
 	}
 	
 	public static function ParseShortCode($args, $content=null, $parser=null, $tagname=null)
 	{
-		return ($embed = EmbededContent::get()->byID($args['id'])) ? $embed->forTemplate() : null;
+		return ($embed = EmbeddedContent::get()->byID($args['id'])) ? $embed->forTemplate() : null;
 	}
 }

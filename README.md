@@ -1,6 +1,6 @@
-## embeded ##
+## embedded ##
 
-Management interface for embeding or creating embeded content via shortcode
+Management interface for embeding or creating embedded content via shortcode
 
 ## Requirements ##
 Silverstripe 3+
