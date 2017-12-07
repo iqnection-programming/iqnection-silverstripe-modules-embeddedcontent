@@ -1,15 +1,19 @@
 <?php
 
-class EmbeddedContent extends DataObject
+use SilverStripe\ORM;
+use SilverStripe\Forms;
+use NathanCox\CodeEditorField\CodeeditorField;
+
+class EmbeddedContent extends ORM\DataObject
 {
-	private static $db = array(
+	private static $db = [
 		'Title' => 'Varchar(255)',
 		'EmbedCode' => 'Text',
-	);
+	];
 
-	private static $summary_fields = array(
+	private static $summary_fields = [
 		'Title' => 'Title'
-	);
+	];
 
 	public function getCMSFields()
 	{
@@ -24,19 +28,19 @@ class EmbeddedContent extends DataObject
 			);
 		}
 		$shortCodeField = ($this->ID) ? 
-			TextField::create('ShortCode','Short Code')
+			Forms\TextField::create('ShortCode','Short Code')
 				->setValue($this->GenerateShortCode())
 				->setAttribute('readonly','readonly')
 				->setDescription('Copy this short code and paste in your content where you want the embed code to appear') :
-			ReadonlyField::create('ShortCode','Short Code')->setValue('Press Save to generate short code');
+			Forms\ReadonlyField::create('ShortCode','Short Code')->setValue('Press Save to generate short code');
 		$fields->insertBefore($shortCodeField , 'Title');
 		return $fields;
 	}
 
-	public function canCreate($member = null) { return true; }
-	public function canDelete($member = null) { return true; }
-	public function canEdit($member = null)   { return true; }
-	public function canView($member = null)   { return true; }
+	public function canCreate($member = null,$context = array()) { return true; }
+	public function canDelete($member = null,$context = array()) { return true; }
+	public function canEdit($member = null,$context = array())   { return true; }
+	public function canView($member = null,$context = array())   { return true; }
 
 	public function GenerateShortCode()
 	{
@@ -50,6 +54,6 @@ class EmbeddedContent extends DataObject
 	
 	public static function ParseShortCode($args, $content=null, $parser=null, $tagname=null)
 	{
-		return ($embed = EmbeddedContent::get()->byID($args['id'])) ? $embed->forTemplate() : null;
+		return ($embed = self::get()->byID($args['id'])) ? $embed->forTemplate() : null;
 	}
 }

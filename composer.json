@@ -1,6 +1,6 @@
 {
 	"name": "iqnection-modules/embeddedcontent",
-	"description": "SilverStripe 3 Embedded Content Management",
+	"description": "SilverStripe Embedded Content Management",
 	"type": "silverstripe-module",
 	"keywords": ["iqnection","pages"],
 	"authors": [
@@ -10,8 +10,8 @@
 		}
 	],
 	"require": {
-		"silverstripe/framework": "~3.0",
-		"iqnection-modules/linkfield" : "0.0.*",
+		"silverstripe/framework": "4.*",
+		"iqnection-modules/linkfield" : "2.*",
 		"nathancox/codeeditorfield" : "dev-master"
 	},
 	"extra": {
