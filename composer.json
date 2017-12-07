@@ -11,7 +11,7 @@
 	],
 	"require": {
 		"silverstripe/framework": "4.*",
-		"iqnection-modules/linkfield" : "2.*",
+		"iqnection-modules/linkfield" : "dev-master",
 		"nathancox/codeeditorfield" : "dev-master"
 	},
 	"extra": {
