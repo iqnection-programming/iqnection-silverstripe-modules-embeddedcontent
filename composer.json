@@ -1,8 +1,8 @@
 {
-	"name": "iqnection-modules/embeddedcontent",
+	"name": "iqnection-modules/embededcontent",
 	"description": "SilverStripe Embedded Content Management",
 	"type": "silverstripe-module",
-	"keywords": ["iqnection","pages"],
+	"keywords": ["iqnection","module"],
 	"authors": [
 		{
 			"name": "IQnection",
@@ -10,8 +10,7 @@
 		}
 	],
 	"require": {
-		"silverstripe/framework": "4.*",
-		"iqnection-modules/linkfield" : "dev-master"
+		"silverstripe/framework": "4.*"
 	},
 	"extra": {
 		"installer-name": "iq-embeddedcontent"
