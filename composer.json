@@ -11,8 +11,7 @@
 	],
 	"require": {
 		"silverstripe/framework": "4.*",
-		"iqnection-modules/linkfield" : "dev-master",
-		"nathancox/codeeditorfield" : "v2.x-dev"
+		"iqnection-modules/linkfield" : "dev-master"
 	},
 	"extra": {
 		"installer-name": "iq-embeddedcontent"
