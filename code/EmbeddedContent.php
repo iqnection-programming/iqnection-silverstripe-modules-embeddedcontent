@@ -27,6 +27,10 @@ class EmbeddedContent extends ORM\DataObject
 				->setRows(10)
 			);
 		}
+		else
+		{
+			$fields->dataFieldByName('EmbedCode')->addExtraClass('monotype');
+		}
 		$shortCodeField = ($this->ID) ? 
 			Forms\TextField::create('ShortCode','Short Code')
 				->setValue($this->GenerateShortCode())
