@@ -1,11 +1,15 @@
 <?php
 
+namespace IQnection\EmbeddedContent;
+
 use SilverStripe\ORM;
 use SilverStripe\Forms;
 use NathanCox\CodeEditorField\CodeeditorField;
 
 class EmbeddedContent extends ORM\DataObject
 {
+	private static $table_name = 'EmbeddedContent';
+	
 	private static $db = [
 		'Title' => 'Varchar(255)',
 		'EmbedCode' => 'Text',

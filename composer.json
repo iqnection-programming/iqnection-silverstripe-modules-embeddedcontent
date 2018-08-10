@@ -10,9 +10,16 @@
 		}
 	],
 	"require": {
-		"silverstripe/framework": "4.*"
+		"silverstripe/framework": "^4.1"
 	},
 	"extra": {
-		"installer-name": "iq-embeddedcontent"
+		"expose": [
+			"images"
+		]
+	},
+	"autoload": {
+		"psr-4": {
+			"IQnection\\EmbeddedContent\\": "app/src/"
+		}
 	}
 }
