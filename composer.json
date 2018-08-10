@@ -1,7 +1,7 @@
 {
 	"name": "iqnection-modules/embededcontent",
 	"description": "SilverStripe Embedded Content Management",
-	"type": "silverstripe-module",
+	"type": "silverstripe-vendormodule",
 	"keywords": ["iqnection","module"],
 	"authors": [
 		{
