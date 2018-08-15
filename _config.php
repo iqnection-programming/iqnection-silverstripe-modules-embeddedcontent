@@ -1,4 +1,4 @@
 <?php
 
 use SilverStripe\View\Parsers\ShortcodeParser;
-ShortcodeParser::get('default')->register('embed_content', array('EmbeddedContent', 'ParseShortCode'));
+ShortcodeParser::get('default')->register('embed_content', array(IQnection\EmbeddedContent\EmbeddedContent::class, 'ParseShortCode'));
