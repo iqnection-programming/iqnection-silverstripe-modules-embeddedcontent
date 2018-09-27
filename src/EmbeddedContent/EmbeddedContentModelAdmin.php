@@ -12,7 +12,7 @@ class EmbeddedContentModelAdmin extends ModelAdmin
 		]
 	];
 
-	private static $menu_icon = 'iqnection-modules/embeddedcontent:images/admin-icon.png';
+	private static $menu_icon_class = 'font-icon-code';
 	private static $menu_title = 'Embed Content';
 	private static $url_segment = 'embeddedcontent';
 	public $showImportForm = false;
