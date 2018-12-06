@@ -57,7 +57,7 @@ class EmbeddedContent extends ORM\DataObject
 	
 	public function forTemplate()
 	{
-		return $this->renderWith(array('EmbeddedContent'));
+		return $this->renderWith(array('IQnection/EmbeddedContent/EmbeddedContent'));
 	}
 	
 	public static function ParseShortCode($args, $content=null, $parser=null, $tagname=null)
