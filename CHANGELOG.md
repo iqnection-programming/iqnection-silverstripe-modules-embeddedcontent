@@ -1,6 +1,9 @@
 ## Package: iqnection-silverstripe-modules-embeddedcontent
 # Change Log
 
+## [2.1.2]
+- added some style options
+
 ## [2.1.1]
 - Fixed template path
 
