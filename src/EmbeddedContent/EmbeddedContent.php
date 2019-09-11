@@ -78,15 +78,15 @@ class EmbeddedContent extends ORM\DataObject
 		return $shortCode;
 	}
 	
-	public function CssClasses()
+	public function TemplateCssClasses()
 	{
 		$classes = array($this->CssClass);
 		if ($this->Alignment)
 		{
 			$classes[] = preg_replace('/\s/','-',strtolower($this->Alignment));
 		}
-		$this->extend('updateCssClasses',$classes);
-		return explode(' ',$classes);
+		$this->extend('updateTemplateCssClasses',$classes);
+		return implode(' ',$classes);
 	}
 	
 	public function CssWidth()
