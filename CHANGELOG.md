@@ -1,7 +1,7 @@
 ## Package: iqnection-silverstripe-modules-embeddedcontent
 # Change Log
 
-## [2.2.3]
+## [2.1.3]
 - changed method name due to conflict with SS4 method
 - fixed bug in CSS classes
 
