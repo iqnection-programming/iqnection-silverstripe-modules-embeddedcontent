@@ -44,7 +44,8 @@ class EmbeddedContent extends ORM\DataObject
 				->setAttribute('readonly','readonly')
 				->setDescription('Copy this short code and paste in your content where you want the embed code to appear') :
 			Forms\ReadonlyField::create('ShortCode','Short Code')->setValue('Press Save to generate short code');
-		$fields->insertBefore($shortCodeField , 'Title');
+		// $fields->insertBefore($shortCodeField , 'Title');
+		$fields->insertBefore('Title', $shortCodeField );
 		
 		$fields->addFieldToTab('Root.Styles', Forms\TextField::create('CssClass','CSS Class') );
 		$fields->addFieldToTab('Root.Styles', Forms\DropdownField::create('Alignment','Alignment')
@@ -91,9 +92,11 @@ class EmbeddedContent extends ORM\DataObject
 	
 	public function CssWidth()
 	{
-		if (preg_match('/^[0-9.]+(\%|px)$/',$this->Width))
-		{
-			return $this->Width;
+		if($this->width) {
+			if (preg_match('/^[0-9.]+(\%|px)$/',$this->Width))
+			{
+				return $this->Width;
+			}
 		}
 	}
 	
